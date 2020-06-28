@@ -3,7 +3,74 @@ html,body{
     margin: 0;
     height: 100%
 }
-body{
 
 
+#container{
+    height: 500px;
+    width: 400px;
+    max-width: 70%;
+    max-height: 90%;
+    margin: auto;
+    display: grid;
+    gap: 20px 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    border-radius: 5%;
+
+    padding: 40px 25px;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.grid-item{
+    border: 1px solid black;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 90%
+}
+.grid-item:hover{
+    cursor: pointer;
+}
+
+#display-screen{
+    font-family: 'Orbitron', sans-serif;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: 36px;
+    overflow: hidden;
+
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    color: white;
+
+    border: 1px solid red;
+}
+
+.button-zero{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-content: left;
+    padding-left: 30px;
+    border-radius: 45%;
+}
+
+.orange-button{
+    background-color: #fe9e0a;
+    color: white;
+}
+
+.dark-button{
+    background-color: #333333;
+    color: white;
+}
+
+.light-button{
+    background-color: #a5a5a5;
+    color: black;
 }
