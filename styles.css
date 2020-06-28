@@ -3,7 +3,9 @@ html,body{
     margin: 0;
     height: 100%
 }
-
+body{
+    background-color: cornsilk;
+}
 
 #container{
     height: 500px;
@@ -18,8 +20,8 @@ html,body{
     border-radius: 5%;
 
     padding: 40px 25px;
-    background-color: black;
-    border: 1px solid black;
+    background-color: rgb(32, 31, 31);
+    box-shadow: 10px 5px 5px grey;
 }
 
 .grid-item{
@@ -29,14 +31,15 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 90%
+    border-radius: 90%;
+    box-shadow: 2px 2px 2px grey;
 }
 .grid-item:hover{
     cursor: pointer;
 }
 
 #display-screen{
-    font-family: 'Orbitron', sans-serif;
+    font-family: monospace, 'Orbitron', sans-serif;
     grid-column-start: 1;
     grid-column-end: 5;
     font-size: 36px;
@@ -49,7 +52,7 @@ html,body{
     padding-right: 20px;
     color: white;
 
-    border: 1px solid red;
+    border: 2px solid red;
 }
 
 .button-zero{
@@ -73,4 +76,10 @@ html,body{
 .light-button{
     background-color: #a5a5a5;
     color: black;
+}
+
+.clear-button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-radius: 45%;
 }
