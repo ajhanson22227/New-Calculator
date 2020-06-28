@@ -12,6 +12,15 @@ let decimalOnScreen = false;
 
 let displayVar = document.getElementById('display-screen');
 
+let flashButton = document.querySelectorAll('.grid-item').forEach(button => {
+    button.addEventListener('click', function(){
+        button.classList.add('flash-button');
+        button.addEventListener('animationend', function(){
+            button.classList.remove('flash-button');
+        } )
+    })
+})
+
 let numberButtons = document.querySelectorAll('.number').forEach(number => {
     number.addEventListener('click', function(){
         //make sure it doesn't go past the display screen
@@ -123,7 +132,11 @@ function clearScreen(){
 }
 
 function display(number){
+    number = number.toString();
+    if (number.length < 20)
         displayVar.innerHTML = number;
+    else
+        displayVar.innerHTML = "OVERFLOW"
 }
 
 function reset(){
