@@ -56,10 +56,10 @@ let operandButtons = document.querySelectorAll('.operand').forEach(operand => {
             display(currentNumber)
 
             currentOperator = operand.innerHTML;
-            decimalOnScreen = false;
+            
         }
         previousNumber = parseFloat(currentNumber)
-        
+        decimalOnScreen = false;
         //currentOperator = operand.innerHTML;
         continueNumber = false;
     })
